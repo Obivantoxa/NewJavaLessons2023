@@ -30,7 +30,7 @@ public class Player implements IPlayer {
     @Override
     public boolean needsCard() {
         this.openHand();
-        System.out.println("Нужна ли еще одна карта?");
+        System.out.println("Хотите еще карту ? Да/Yes или Нет/No");
         Scanner scanner = new Scanner(System.in);
         String answer = scanner.nextLine();
         if (answer.equalsIgnoreCase("Да") || answer.equalsIgnoreCase("Yes")) {
@@ -42,12 +42,12 @@ public class Player implements IPlayer {
     @Override
     public void openHand() {
         int sum = 0;
-        System.out.println("----Ваши карты----");
+        System.out.println("----Ваша карты ----" +this.name);
         for (Card c : hand) {
             sum += c.getValue();
             System.out.println(c.getName());
         }
-        System.out.println("**подсказка** " + sum);
+        System.out.println("**очки** " + sum);
 
 //        for (Card c : hand){
 //            System.out.println(sum+=c.getValue());

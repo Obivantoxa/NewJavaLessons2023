@@ -21,6 +21,7 @@ public class BlackJack implements IBlackJack {
         for (Player p : players) {
             p.addCardToHand(koloda.getRandomCard());
             p.addCardToHand(koloda.getRandomCard());
+           // p.getName();
         }
     }
 
@@ -29,6 +30,7 @@ public class BlackJack implements IBlackJack {
         for (Player p : players) {
             while (p.needsCard()) {
                 p.addCardToHand(koloda.getRandomCard());
+                //p.getName();
             }
         }
     }
